@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>메타고딩 룰렛</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 28px;
+      padding: 30px 0 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .user-info {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 100px;
+    }
+
+    .balance {
+      text-align: left;
+      font-size: 24px;
+      margin: 30px 0 10px 20px;
+      font-weight: bold;
+    }
+
+    .bet-btn {
+      display: block;
+      margin-left: auto;
+      margin-right: 20px;
+      background-color: #f2f2f2;
+      border: none;
+      font-size: 24px;
+      padding: 10px 30px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+    .ranking-container {
+      margin: 40px auto;
+      background-color: #f2f2f2;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .ranking-container h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .ranking-list {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .bet-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup-content {
+      background-color: #f0f0f0;
+      padding: 30px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+      text-align: center;
+    }
+
+    .popup-content h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .popup-content input {
+      width: 90%;
+      padding: 12px;
+      font-size: 18px;
+      margin-bottom: 20px;
+      background-color: #ddd;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .bet-numbers {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .bet-number {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 16px;
+      font-weight: bold;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .bet-number.selected {
+      border: 3px solid black;
+    }
+
+    .yellow { background-color: yellow; }
+    .green { background-color: green; color: white; }
+    .pink { background-color: pink; }
+    .blue { background-color: blue; color: white; }
+    .red { background-color: red; color: white; }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: red;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      margin-top: 20px;
+      font-size: 20px;
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>메타고딩 룰렛</header>
+
+  <div class="user-info">00000 홍길동님</div>
+
+  <div class="balance">잔액<br>9999P</div>
+  <button class="bet-btn" onclick="openPopup()">베팅</button>
+
+  <div class="ranking-container">
+    <h2>현재 포인트 랭킹</h2>
+    <div class="ranking-list">
+      1&nbsp;&nbsp;&nbsp;&nbsp;10000 홍길동&nbsp;&nbsp;&nbsp;&nbsp;10000P<br>
+      2&nbsp;&nbsp;&nbsp;&nbsp;20000 홍길동&nbsp;&nbsp;&nbsp;&nbsp;10000P<br>
+      3&nbsp;&nbsp;&nbsp;&nbsp;30000 홍길동&nbsp;&nbsp;&nbsp;&nbsp;10000P<br>
+      4&nbsp;&nbsp;&nbsp;&nbsp;40000 홍길동&nbsp;&nbsp;&nbsp;&nbsp;10000P<br>
+      5&nbsp;&nbsp;&nbsp;&nbsp;50000 홍길동&nbsp;&nbsp;&nbsp;&nbsp;10000P<br>
+      6&nbsp;&nbsp;&nbsp;&nbsp;60000 홍길동&nbsp;&nbsp;&nbsp;&nbsp;10000P<br>
+      7&nbsp;&nbsp;&nbsp;&nbsp;70000 홍길동&nbsp;&nbsp;&nbsp;&nbsp;10000P<br>
+      8&nbsp;&nbsp;&nbsp;&nbsp;80000 홍길동&nbsp;&nbsp;&nbsp;&nbsp;10000P<br>
+      9&nbsp;&nbsp;&nbsp;&nbsp;90000 홍길동&nbsp;&nbsp;&nbsp;&nbsp;10000P<br>
+      10&nbsp;&nbsp;00000 홍길동&nbsp;&nbsp;&nbsp;&nbsp;10000P
+    </div>
+  </div>
+
+  <div class="bet-popup" id="popup">
+    <div class="popup-content">
+      <div class="close-btn" onclick="closePopup()">✕</div>
+      <h2>베팅 금액</h2>
+      <input type="number" id="betAmount" placeholder="금액을 입력하세요" />
+      <h2>베팅 번호</h2>
+      <div class="bet-numbers">
+        <div class="bet-number yellow" data-number="1">1</div>
+        <div class="bet-number green" data-number="3">3</div>
+        <div class="bet-number pink" data-number="5">5</div>
+        <div class="bet-number blue" data-number="10">10</div>
+        <div class="bet-number red" data-number="20">20</div>
+      </div>
+      <button class="submit-btn" onclick="submitBet()">베팅하기</button>
+    </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    let selectedNumber = null;
+    document.querySelectorAll(".bet-number").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".bet-number").forEach(b => b.classList.remove("selected"));
+        btn.classList.add("selected");
+        selectedNumber = btn.dataset.number;
+      });
+    });
+
+    function submitBet() {
+      const amount = document.getElementById("betAmount").value;
+      if (!amount || !selectedNumber) {
+        alert("금액과 번호를 모두 선택해주세요!");
+        return;
+      }
+      alert(`${amount}P를 ${selectedNumber}번에 베팅했습니다!`);
+      closePopup();
+    }
+
+    document.getElementById("popup").addEventListener("click", function(e) {
+      if (e.target.id === "popup") {
+        closePopup();
+      }
+    });
+  </script>
+
+</body>
+</html>
