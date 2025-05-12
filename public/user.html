@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="meta_roulette.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>META ROULETTE</title>
+    <style>
+        @font-face {
+            font-family: "noto_sans_kr";
+            src: url(noto_sans_kr.woff2) format("woff2");
+            font-weight: normal;
+        }
+
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            font-family: "noto_sans_kr", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('background.png') center;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .dashboard-container {
+            position: relative;
+            z-index: 1;
+            width: 350px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+            padding: 2rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .meta-roulette-logo {
+            width: 120px;
+            height: auto;
+        }
+
+        .user-info {
+            margin-bottom: 2rem;
+        }
+
+        .user-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .user-points {
+            font-size: 18px;
+            font-weight: 600;
+            color: #e9bf5d;
+        }
+
+        .bet-section {
+            margin-bottom: 2rem;
+        }
+
+        .bet-button {
+            display: inline-block;
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #e9bf5d;
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .bet-button:hover {
+            background-color: #d4a937;
+        }
+
+        .ranking-section {
+            text-align: left;
+        }
+
+        .ranking-title {
+            font-size: 18px;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .ranking-table {
+            width: 100%;
+            color: #fff;
+            border-collapse: collapse;
+        }
+
+        .ranking-table th,
+        .ranking-table td {
+            padding: 0.5rem 0;
+        }
+
+        .ranking-table th {
+            padding-right: 10px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            width: 320px;
+            padding: 1.5rem;
+            position: relative;
+            text-align: center;
+            color: #fff;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #fff;
+        }
+
+        .modal-content label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 0.3rem;
+            color: #ccc;
+            text-align: left;
+        }
+
+        .modal-content input[type="number"] {
+            width: 100%;
+            padding: 0.6rem;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #222;
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 1rem;
+            outline: none;
+        }
+
+        .modal-content input[type="number"]::-webkit-inner-spin-button,
+        .modal-content input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .modal-content .bet-popup-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content .bet-popup-subtitle {
+            font-size: 14px;
+            font-weight: 400;
+            color: #aaa;
+            margin-bottom: 1.5rem;
+        }
+
+        .ball-selection {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .ball-wrapper input[type="radio"] {
+            display: none;
+        }
+
+        .ball {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .ball-wrapper input[type="radio"]:checked+.ball {
+            transform: scale(1.2);
+        }
+
+        #betAlert {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            padding: 0.5rem 1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            z-index: 10000;
+            transition: transform 0.5s ease;
+            color: #fff;
+        }
+
+        #betAlert.show {
+            transform: translate(-50%, 0);
+        }
+
+        #betAlert.success {
+            background-color: #2ecc71;
+        }
+
+        #betAlert.error {
+            background-color: #b33939;
+        }
+
+        .ball.yellow {
+            background-color: #ffcf00;
+        }
+
+        .ball.green {
+            background-color: #008000;
+        }
+
+        .ball.pink {
+            background-color: #ff9cb1;
+        }
+
+        .ball.blue {
+            background-color: #3273dc;
+        }
+
+        .ball.red {
+            background-color: #ff2121;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="betAlert"></div>
+    <div class="dashboard-container">
+        <div class="logo">
+            <img src="meta_roulette.svg" class="meta-roulette-logo" alt="Meta Roulette Logo">
+        </div>
+
+        <div class="user-info">
+            <div class="user-name">-</div>
+            <div class="user-points">-</div>
+        </div>
+
+        <div class="bet-section">
+            <button class="bet-button" id="openModalBtn">베팅</button>
+        </div>
+
+        <div class="ranking-section">
+            <div class="ranking-title">랭킹</div>
+            <table class="ranking-table">
+                <tbody id="rankingTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="betModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModalBtn">&times;</button>
+            <div class="bet-popup-title">베팅 금액</div>
+            <input type="number" id="betAmountModal" name="betAmountModal" placeholder="금액을 입력하세요." autocomplete="off">
+            <div class="bet-popup-subtitle">베팅 번호</div>
+            <div class="ball-selection">
+                <label class="ball-wrapper">
+                    <input type="radio" name="ball" value="1">
+                    <div class="ball yellow">1</div>
+                </label>
+                <label class="ball-wrapper">
+                    <input type="radio" name="ball" value="3">
+                    <div class="ball green">3</div>
+                </label>
+                <label class="ball-wrapper">
+                    <input type="radio" name="ball" value="5">
+                    <div class="ball pink">5</div>
+                </label>
+                <label class="ball-wrapper">
+                    <input type="radio" name="ball" value="10">
+                    <div class="ball blue">10</div>
+                </label>
+                <label class="ball-wrapper">
+                    <input type="radio" name="ball" value="20">
+                    <div class="ball red">20</div>
+                </label>
+            </div>
+            <button class="bet-button" id="confirmBetBtn">베팅하기</button>
+        </div>
+    </div>
+
+    <script>
+        const stored = sessionStorage.getItem('loggedInUser');
+        if (!stored) {
+            window.location.href = 'index.html';
+        }
+        const currentUser = JSON.parse(stored);
+        document.querySelector('.user-name').textContent = `${currentUser.number} ${currentUser.name}`;
+        document.querySelector('.user-points').textContent = `${currentUser.point}P`;
+
+        const rankingBody = document.getElementById('rankingTableBody');
+        fetch('user.json')
+            .then(r => r.json())
+            .then(list => {
+                list.sort((a, b) => b.point - a.point);
+                list.slice(0, 3).forEach((u, idx) => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td>${idx + 1}</td><td>${u.number} ${u.name}</td><td>${u.point}P</td>`;
+                    rankingBody.appendChild(tr);
+                });
+            });
+
+        const modal = document.getElementById("betModal");
+        const openModalBtn = document.getElementById("openModalBtn");
+        const closeModalBtn = document.getElementById("closeModalBtn");
+
+        openModalBtn.addEventListener("click", () => modal.style.display = "flex");
+        closeModalBtn.addEventListener("click", () => modal.style.display = "none");
+        window.addEventListener("click", e => {
+            if (e.target === modal) modal.style.display = "none";
+        });
+
+        const betAlert = document.getElementById("betAlert");
+        const confirmBetBtn = document.getElementById("confirmBetBtn");
+        const betAmountModal = document.getElementById("betAmountModal");
+
+        function showAlert(msg, type) {
+            betAlert.textContent = msg;
+            betAlert.className = type + " show";
+            setTimeout(() => betAlert.classList.remove("show"), 1500);
+        }
+
+        confirmBetBtn.addEventListener("click", () => {
+            const betAmount = Number(betAmountModal.value);
+            const selectedBall = document.querySelector('input[name="ball"]:checked');
+            const remaining = currentUser.point;
+
+            if (!selectedBall || !betAmount || betAmount > remaining) {
+                showAlert("올바른 베팅 값을 입력하세요.", "error");
+                return;
+            }
+            showAlert("베팅이 완료되었습니다!", "success");
+        });
+    </script>
+</body>
+</html>

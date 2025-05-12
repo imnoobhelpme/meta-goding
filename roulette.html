@@ -1,262 +1,161 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>메타고딩 룰렛</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
-
-    body {
-      background: radial-gradient(circle at center, #e0f7fa, #b2ebf2);
-      margin: 0;
-      padding: 0;
-      font-family: 'Orbitron', sans-serif;
-      color: #333;
-      overflow-x: hidden;
-    }
-
-    .marquee {
-      font-size: 3em;
-      color: #00796b;
-      margin: 20px 0;
-      text-align: center;
-      animation: blink 1s infinite;
-      text-shadow: 0 0 10px #4dd0e1, 0 0 20px #4dd0e1;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-
-    .main-layout {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 20px;
-    }
-
-    .side-panel {
-      width: 20%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .side-panel .led-board {
-      font-size: 1.1em;
-      color: #00796b;
-      background: #e0f2f1;
-      border: 2px dashed #4db6ac;
-      box-shadow: 0 0 10px #b2dfdb;
-      padding: 12px 24px;
-      text-align: center;
-      border-radius: 15px;
-    }
-
-    .center-panel {
-      width: 60%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-    }
-
-    .wheel-box {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      margin-bottom: 20px;
-    }
-
-    .wheel {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      border: 12px solid #fff;
-      position: absolute;
-      box-shadow: 0 0 30px rgba(0, 150, 136, 0.3), inset 0 0 20px #fff;
-    }
-
-    .arrow {
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 30px solid #00796b;
-      top: -30px;
-      left: calc(50% - 20px);
-      z-index: 100;
-      filter: drop-shadow(0 0 5px #00796b);
-    }
-
-    .spin-btn {
-      background: linear-gradient(to right, #4fc3f7, #0288d1);
-      color: white;
-      border: none;
-      padding: 18px 36px;
-      font-size: 24px;
-      cursor: pointer;
-      box-shadow: 0 0 10px #81d4fa;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
-
-    .spin-btn:hover {
-      background: #29b6f6;
-      transform: scale(1.05);
-    }
-
-    #result {
-      margin-top: 20px;
-      font-size: 24px;
-      color: #ffb300;
-      text-shadow: 0 0 5px #fff59d;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <div class="marquee">💡 메타고딩 룰렛 💡</div>
-
-  <div class="main-layout">
-    <div class="side-panel">
-      <div class="led-board">🌟 오늘의 행운은?</div>
-      <div class="led-board">🎉 친구들과 함께 즐겨요!</div>
-      <div class="led-board">🌈 긍정 에너지 뿜뿜!</div>
-      <div class="led-board">🌀 다양한 숫자에 도전!</div>
-      <div class="led-board">🎈 매일매일 새롭게!</div>
-      <div class="led-board">💬 결과를 공유해보세요!</div>
-      <div class="led-board">🔍 문제 해결의 첫걸음!</div>
-      <div class="led-board">🎯 집중력 강화 시간!</div>
-      <div class="led-board">💡 창의력을 키워요!</div>
-      <div class="led-board">📈 오늘도 성장하는 우리!</div>
-    </div>
-
-    <div class="center-panel">
-      <div class="wheel-box">
-        <div class="arrow" id="arrow"></div>
-        <canvas id="wheelCanvas" class="wheel"></canvas>
-      </div>
-      <button class="spin-btn" onclick="spinWheel()">🎰 룰렛 돌리기</button>
-      <h2 id="result"></h2>
-    </div>
-
-    <div class="side-panel">
-      <div class="led-board">☀️ 오늘도 좋은 하루!</div>
-      <div class="led-board">📚 공부도 게임처럼!</div>
-      <div class="led-board">💡 새로운 도전 해보세요</div>
-      <div class="led-board">✨ 룰렛은 언제나 환영!</div>
-      <div class="led-board">🎨 창의력 UP!</div>
-      <div class="led-board">🚀 함께 성장하는 메타고딩!</div>
-      <div class="led-board">🤝 친구와 함께 더 즐겁게!</div>
-      <div class="led-board">🔧 도전은 계속된다!</div>
-      <div class="led-board">🌍 넓은 세상을 향해!</div>
-      <div class="led-board">🎊 오늘도 신나게 시작!</div>
-    </div>
-  </div>
-
-  <!-- <audio id="spinSound" src="https://www.soundjay.com/mechanical/sounds/mechanical-gear-turning-1.mp3"></audio> -->
-  <audio id="spinSound" src="gear-spinning-loop-6981.mp3"></audio>
-
-  <script>
-    const canvas = document.getElementById('wheelCanvas');
-    const ctx = canvas.getContext('2d');
-    canvas.width = 400;
-    canvas.height = 400;
-
-    const rawSegments = [
-      ...Array(20).fill({ number: 1, color: '#FFF176' }),
-      ...Array(10).fill({ number: 3, color: '#AED581' }),
-      ...Array(5).fill({ number: 5, color: '#F48FB1' }),
-      ...Array(3).fill({ number: 10, color: '#81D4FA' }),
-      ...Array(1).fill({ number: 20, color: '#FF8A65' })
-    ];
-
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    }
-
-    let segments = shuffle([...rawSegments]);
-    let degPerSlice = 360 / segments.length;
-    let currentAngle = 0;
-    let spinning = false;
-
-    function drawWheel(rotation = 0) {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.save();
-      ctx.translate(200, 200);
-      ctx.rotate(rotation * Math.PI / 180);
-      for (let i = 0; i < segments.length; i++) {
-        const startAngle = (i * degPerSlice) * Math.PI / 180;
-        const endAngle = ((i + 1) * degPerSlice) * Math.PI / 180;
-        ctx.beginPath();
-        ctx.moveTo(0, 0);
-        ctx.arc(0, 0, 200, startAngle, endAngle);
-        ctx.fillStyle = segments[i].color;
-        ctx.fill();
-        ctx.stroke();
-
-        ctx.save();
-        ctx.rotate(startAngle + (endAngle - startAngle) / 2);
-        ctx.fillStyle = '#333';
-        ctx.font = '16px Orbitron';
-        ctx.fillText(segments[i].number, 130, 0);
-        ctx.restore();
-      }
-      ctx.restore();
-    }
-
-    drawWheel();
-
-    function spinWheel() {
-      if (spinning) return;
-      spinning = true;
-
-      const spinSound = document.getElementById('spinSound');
-      spinSound.currentTime = 0;
-      spinSound.play();
-
-      segments = shuffle([...rawSegments]);
-      degPerSlice = 360 / segments.length;
-
-      const randomIndex = Math.floor(Math.random() * segments.length);
-      const targetAngle = 360 * 5 + (270 - (randomIndex * degPerSlice + degPerSlice / 2));
-
-      let start = null;
-
-      function animate(timestamp) {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-        const easeOut = (t) => 1 - Math.pow(1 - t, 3);
-
-        const duration = 4000;
-        const t = Math.min(progress / duration, 1);
-        currentAngle = easeOut(t) * targetAngle;
-
-        drawWheel(currentAngle % 360);
-
-        if (t < 1) {
-          requestAnimationFrame(animate);
-        } else {
-          const spinSound = document.getElementById('spinSound');
-          spinSound.pause();
-          spinSound.currentTime = 0;
-
-          const result = segments[randomIndex];
-          document.getElementById('result').innerText = `🎯 결과: ${result.number}`;
-          spinning = false;
+    <meta charset="UTF-8" />
+    <link rel="icon" href="meta_roulette.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>META ROULETTE</title>
+    <style>
+        @font-face {
+            font-family: "noto_sans_kr";
+            src: url(noto_sans_kr.woff2) format("woff2");
+            font-weight: normal;
         }
-      }
 
-      requestAnimationFrame(animate);
-    }
-  </script>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            font-family: "noto_sans_kr", sans-serif
+        }
+
+        body {
+            background: url('background.png') center/cover no-repeat;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .5);
+            z-index: 0;
+        }
+
+        .roulette-wrapper {
+            position: relative;
+            z-index: 1;
+            width: 350px;
+            background: rgba(0, 0, 0, .5);
+            border-radius: 30px;
+            padding: 2rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .stage {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto
+        }
+
+        #wheel {
+            width: 100%;
+            height: 100%;
+            transition: transform 3s ease-out;
+            transform-origin: 50% 50%
+        }
+
+        .pointer {
+            position: absolute;
+            top: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #e9bf5d;
+        }
+
+        #score {
+            margin-top: 1.5rem;
+            font-size: 20px;
+            font-weight: 700
+        }
+
+        #spinBtn {
+            display: block;
+            width: 100%;
+            margin-top: 1.8rem;
+            padding: .8rem;
+            border: none;
+            border-radius: 5px;
+            background: #e9bf5d;
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .3s
+        }
+
+        #spinBtn:hover {
+            background: #d4a937
+        }
+
+        #spinBtn:disabled {
+            opacity: .6;
+            cursor: default
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="roulette-wrapper">
+        <div class="stage">
+            <img id="wheel" src="roulette.svg" alt="Roulette wheel">
+            <div class="pointer"></div>
+        </div>
+        <button id="spinBtn">룰렛 돌리기</button>
+        <div id="score">결과: 0번</div>
+    </div>
+
+    <script>
+        const wheel = document.getElementById('wheel');
+        const spinBtn = document.getElementById('spinBtn');
+        const scoreDisplay = document.getElementById('score');
+
+        let currentRotation = 0,
+            lastX = null,
+            pendingScore = null;
+
+        spinBtn.addEventListener('click', () => {
+            spinBtn.disabled = true;
+
+            let x;
+            do {
+                x = Math.floor(Math.random() * 40)
+            } while (x === lastX);
+            lastX = x;
+
+            const targetAngle = 9 * x;
+            const minRot = 1800;
+            const currentMod = ((currentRotation % 360) + 360) % 360;
+            let diff = currentMod - targetAngle;
+            if (diff < 0) diff += 360;
+            const additional = minRot + diff;
+            currentRotation -= additional;
+            wheel.style.transform = `rotate(${currentRotation}deg)`;
+
+            pendingScore = [20, 1, 1, 1, 3, 5, 1, 1, 1, 3, 10, 1, 1, 1, 3, 5, 1, 1, 1, 3,
+                5, 1, 1, 1, 3, 5, 1, 1, 1, 3, 10, 1, 1, 1, 3, 5, 1, 1, 1, 3
+            ][x];
+        });
+
+        wheel.addEventListener('transitionend', () => {
+            if (pendingScore !== null) {
+                scoreDisplay.innerText = `결과: ${pendingScore}번`;
+                pendingScore = null;
+                spinBtn.disabled = false;
+            }
+        });
+    </script>
 </body>
 </html>

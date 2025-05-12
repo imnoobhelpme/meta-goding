@@ -1,0 +1,3002 @@
+[
+    {
+        "number": "10101",
+        "name": "학생명",
+        "point": 16
+    },
+    {
+        "number": "10102",
+        "name": "학생명",
+        "point": 17
+    },
+    {
+        "number": "10103",
+        "name": "학생명",
+        "point": 18
+    },
+    {
+        "number": "10104",
+        "name": "학생명",
+        "point": 19
+    },
+    {
+        "number": "10105",
+        "name": "학생명",
+        "point": 20
+    },
+    {
+        "number": "10106",
+        "name": "학생명",
+        "point": 21
+    },
+    {
+        "number": "10107",
+        "name": "학생명",
+        "point": 22
+    },
+    {
+        "number": "10108",
+        "name": "학생명",
+        "point": 23
+    },
+    {
+        "number": "10109",
+        "name": "학생명",
+        "point": 24
+    },
+    {
+        "number": "10110",
+        "name": "학생명",
+        "point": 25
+    },
+    {
+        "number": "10111",
+        "name": "학생명",
+        "point": 26
+    },
+    {
+        "number": "10112",
+        "name": "학생명",
+        "point": 27
+    },
+    {
+        "number": "10113",
+        "name": "학생명",
+        "point": 28
+    },
+    {
+        "number": "10114",
+        "name": "학생명",
+        "point": 29
+    },
+    {
+        "number": "10115",
+        "name": "학생명",
+        "point": 30
+    },
+    {
+        "number": "10116",
+        "name": "학생명",
+        "point": 31
+    },
+    {
+        "number": "10117",
+        "name": "학생명",
+        "point": 32
+    },
+    {
+        "number": "10118",
+        "name": "학생명",
+        "point": 33
+    },
+    {
+        "number": "10119",
+        "name": "학생명",
+        "point": 34
+    },
+    {
+        "number": "10120",
+        "name": "학생명",
+        "point": 35
+    },
+    {
+        "number": "10121",
+        "name": "학생명",
+        "point": 36
+    },
+    {
+        "number": "10122",
+        "name": "학생명",
+        "point": 37
+    },
+    {
+        "number": "10123",
+        "name": "학생명",
+        "point": 38
+    },
+    {
+        "number": "10124",
+        "name": "학생명",
+        "point": 39
+    },
+    {
+        "number": "10125",
+        "name": "학생명",
+        "point": 40
+    },
+    {
+        "number": "10201",
+        "name": "학생명",
+        "point": 21
+    },
+    {
+        "number": "10202",
+        "name": "학생명",
+        "point": 22
+    },
+    {
+        "number": "10203",
+        "name": "학생명",
+        "point": 23
+    },
+    {
+        "number": "10204",
+        "name": "학생명",
+        "point": 24
+    },
+    {
+        "number": "10205",
+        "name": "학생명",
+        "point": 25
+    },
+    {
+        "number": "10206",
+        "name": "학생명",
+        "point": 26
+    },
+    {
+        "number": "10207",
+        "name": "학생명",
+        "point": 27
+    },
+    {
+        "number": "10208",
+        "name": "학생명",
+        "point": 28
+    },
+    {
+        "number": "10209",
+        "name": "학생명",
+        "point": 29
+    },
+    {
+        "number": "10210",
+        "name": "학생명",
+        "point": 30
+    },
+    {
+        "number": "10211",
+        "name": "학생명",
+        "point": 31
+    },
+    {
+        "number": "10212",
+        "name": "학생명",
+        "point": 32
+    },
+    {
+        "number": "10213",
+        "name": "학생명",
+        "point": 33
+    },
+    {
+        "number": "10214",
+        "name": "학생명",
+        "point": 34
+    },
+    {
+        "number": "10215",
+        "name": "학생명",
+        "point": 35
+    },
+    {
+        "number": "10216",
+        "name": "학생명",
+        "point": 36
+    },
+    {
+        "number": "10217",
+        "name": "학생명",
+        "point": 37
+    },
+    {
+        "number": "10218",
+        "name": "학생명",
+        "point": 38
+    },
+    {
+        "number": "10219",
+        "name": "학생명",
+        "point": 39
+    },
+    {
+        "number": "10220",
+        "name": "학생명",
+        "point": 40
+    },
+    {
+        "number": "10221",
+        "name": "학생명",
+        "point": 41
+    },
+    {
+        "number": "10222",
+        "name": "학생명",
+        "point": 42
+    },
+    {
+        "number": "10223",
+        "name": "학생명",
+        "point": 43
+    },
+    {
+        "number": "10224",
+        "name": "학생명",
+        "point": 44
+    },
+    {
+        "number": "10225",
+        "name": "학생명",
+        "point": 45
+    },
+    {
+        "number": "10301",
+        "name": "학생명",
+        "point": 26
+    },
+    {
+        "number": "10302",
+        "name": "학생명",
+        "point": 27
+    },
+    {
+        "number": "10303",
+        "name": "학생명",
+        "point": 28
+    },
+    {
+        "number": "10304",
+        "name": "학생명",
+        "point": 29
+    },
+    {
+        "number": "10305",
+        "name": "학생명",
+        "point": 30
+    },
+    {
+        "number": "10306",
+        "name": "학생명",
+        "point": 31
+    },
+    {
+        "number": "10307",
+        "name": "학생명",
+        "point": 32
+    },
+    {
+        "number": "10308",
+        "name": "학생명",
+        "point": 33
+    },
+    {
+        "number": "10309",
+        "name": "학생명",
+        "point": 34
+    },
+    {
+        "number": "10310",
+        "name": "학생명",
+        "point": 35
+    },
+    {
+        "number": "10311",
+        "name": "학생명",
+        "point": 36
+    },
+    {
+        "number": "10312",
+        "name": "학생명",
+        "point": 37
+    },
+    {
+        "number": "10313",
+        "name": "학생명",
+        "point": 38
+    },
+    {
+        "number": "10314",
+        "name": "학생명",
+        "point": 39
+    },
+    {
+        "number": "10315",
+        "name": "학생명",
+        "point": 40
+    },
+    {
+        "number": "10316",
+        "name": "학생명",
+        "point": 41
+    },
+    {
+        "number": "10317",
+        "name": "학생명",
+        "point": 42
+    },
+    {
+        "number": "10318",
+        "name": "학생명",
+        "point": 43
+    },
+    {
+        "number": "10319",
+        "name": "학생명",
+        "point": 44
+    },
+    {
+        "number": "10320",
+        "name": "학생명",
+        "point": 45
+    },
+    {
+        "number": "10321",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "10322",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "10323",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "10324",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "10325",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "10401",
+        "name": "학생명",
+        "point": 31
+    },
+    {
+        "number": "10402",
+        "name": "학생명",
+        "point": 32
+    },
+    {
+        "number": "10403",
+        "name": "학생명",
+        "point": 33
+    },
+    {
+        "number": "10404",
+        "name": "학생명",
+        "point": 34
+    },
+    {
+        "number": "10405",
+        "name": "학생명",
+        "point": 35
+    },
+    {
+        "number": "10406",
+        "name": "학생명",
+        "point": 36
+    },
+    {
+        "number": "10407",
+        "name": "학생명",
+        "point": 37
+    },
+    {
+        "number": "10408",
+        "name": "학생명",
+        "point": 38
+    },
+    {
+        "number": "10409",
+        "name": "학생명",
+        "point": 39
+    },
+    {
+        "number": "10410",
+        "name": "학생명",
+        "point": 40
+    },
+    {
+        "number": "10411",
+        "name": "학생명",
+        "point": 41
+    },
+    {
+        "number": "10412",
+        "name": "학생명",
+        "point": 42
+    },
+    {
+        "number": "10413",
+        "name": "학생명",
+        "point": 43
+    },
+    {
+        "number": "10414",
+        "name": "학생명",
+        "point": 44
+    },
+    {
+        "number": "10415",
+        "name": "학생명",
+        "point": 45
+    },
+    {
+        "number": "10416",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "10417",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "10418",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "10419",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "10420",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "10421",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "10422",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "10423",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "10424",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "10425",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "10501",
+        "name": "학생명",
+        "point": 36
+    },
+    {
+        "number": "10502",
+        "name": "학생명",
+        "point": 37
+    },
+    {
+        "number": "10503",
+        "name": "학생명",
+        "point": 38
+    },
+    {
+        "number": "10504",
+        "name": "학생명",
+        "point": 39
+    },
+    {
+        "number": "10505",
+        "name": "학생명",
+        "point": 40
+    },
+    {
+        "number": "10506",
+        "name": "학생명",
+        "point": 41
+    },
+    {
+        "number": "10507",
+        "name": "학생명",
+        "point": 42
+    },
+    {
+        "number": "10508",
+        "name": "학생명",
+        "point": 43
+    },
+    {
+        "number": "10509",
+        "name": "학생명",
+        "point": 44
+    },
+    {
+        "number": "10510",
+        "name": "학생명",
+        "point": 45
+    },
+    {
+        "number": "10511",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "10512",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "10513",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "10514",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "10515",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "10516",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "10517",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "10518",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "10519",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "10520",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "10521",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "10522",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "10523",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "10524",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "10525",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "10601",
+        "name": "학생명",
+        "point": 41
+    },
+    {
+        "number": "10602",
+        "name": "학생명",
+        "point": 42
+    },
+    {
+        "number": "10603",
+        "name": "학생명",
+        "point": 43
+    },
+    {
+        "number": "10604",
+        "name": "학생명",
+        "point": 44
+    },
+    {
+        "number": "10605",
+        "name": "학생명",
+        "point": 45
+    },
+    {
+        "number": "10606",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "10607",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "10608",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "10609",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "10610",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "10611",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "10612",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "10613",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "10614",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "10615",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "10616",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "10617",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "10618",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "10619",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "10620",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "10621",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "10622",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "10623",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "10624",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "10625",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "10701",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "10702",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "10703",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "10704",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "10705",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "10706",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "10707",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "10708",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "10709",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "10710",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "10711",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "10712",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "10713",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "10714",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "10715",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "10716",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "10717",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "10718",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "10719",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "10720",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "10721",
+        "name": "학생명",
+        "point": 66
+    },
+    {
+        "number": "10722",
+        "name": "학생명",
+        "point": 67
+    },
+    {
+        "number": "10723",
+        "name": "학생명",
+        "point": 68
+    },
+    {
+        "number": "10724",
+        "name": "학생명",
+        "point": 69
+    },
+    {
+        "number": "10725",
+        "name": "학생명",
+        "point": 70
+    },
+    {
+        "number": "10801",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "10802",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "10803",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "10804",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "10805",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "10806",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "10807",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "10808",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "10809",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "10810",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "10811",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "10812",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "10813",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "10814",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "10815",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "10816",
+        "name": "학생명",
+        "point": 66
+    },
+    {
+        "number": "10817",
+        "name": "학생명",
+        "point": 67
+    },
+    {
+        "number": "10818",
+        "name": "학생명",
+        "point": 68
+    },
+    {
+        "number": "10819",
+        "name": "학생명",
+        "point": 69
+    },
+    {
+        "number": "10820",
+        "name": "학생명",
+        "point": 70
+    },
+    {
+        "number": "10821",
+        "name": "학생명",
+        "point": 71
+    },
+    {
+        "number": "10822",
+        "name": "학생명",
+        "point": 72
+    },
+    {
+        "number": "10823",
+        "name": "학생명",
+        "point": 73
+    },
+    {
+        "number": "10824",
+        "name": "학생명",
+        "point": 74
+    },
+    {
+        "number": "10825",
+        "name": "학생명",
+        "point": 75
+    },
+    {
+        "number": "20101",
+        "name": "학생명",
+        "point": 26
+    },
+    {
+        "number": "20102",
+        "name": "학생명",
+        "point": 27
+    },
+    {
+        "number": "20103",
+        "name": "학생명",
+        "point": 28
+    },
+    {
+        "number": "20104",
+        "name": "학생명",
+        "point": 29
+    },
+    {
+        "number": "20105",
+        "name": "학생명",
+        "point": 30
+    },
+    {
+        "number": "20106",
+        "name": "학생명",
+        "point": 31
+    },
+    {
+        "number": "20107",
+        "name": "학생명",
+        "point": 32
+    },
+    {
+        "number": "20108",
+        "name": "학생명",
+        "point": 33
+    },
+    {
+        "number": "20109",
+        "name": "학생명",
+        "point": 34
+    },
+    {
+        "number": "20110",
+        "name": "학생명",
+        "point": 35
+    },
+    {
+        "number": "20111",
+        "name": "학생명",
+        "point": 36
+    },
+    {
+        "number": "20112",
+        "name": "학생명",
+        "point": 37
+    },
+    {
+        "number": "20113",
+        "name": "학생명",
+        "point": 38
+    },
+    {
+        "number": "20114",
+        "name": "학생명",
+        "point": 39
+    },
+    {
+        "number": "20115",
+        "name": "학생명",
+        "point": 40
+    },
+    {
+        "number": "20116",
+        "name": "학생명",
+        "point": 41
+    },
+    {
+        "number": "20117",
+        "name": "학생명",
+        "point": 42
+    },
+    {
+        "number": "20118",
+        "name": "학생명",
+        "point": 43
+    },
+    {
+        "number": "20119",
+        "name": "학생명",
+        "point": 44
+    },
+    {
+        "number": "20120",
+        "name": "학생명",
+        "point": 45
+    },
+    {
+        "number": "20121",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "20122",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "20123",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "20124",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "20125",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "20201",
+        "name": "학생명",
+        "point": 31
+    },
+    {
+        "number": "20202",
+        "name": "학생명",
+        "point": 32
+    },
+    {
+        "number": "20203",
+        "name": "학생명",
+        "point": 33
+    },
+    {
+        "number": "20204",
+        "name": "학생명",
+        "point": 34
+    },
+    {
+        "number": "20205",
+        "name": "학생명",
+        "point": 35
+    },
+    {
+        "number": "20206",
+        "name": "학생명",
+        "point": 36
+    },
+    {
+        "number": "20207",
+        "name": "학생명",
+        "point": 37
+    },
+    {
+        "number": "20208",
+        "name": "학생명",
+        "point": 38
+    },
+    {
+        "number": "20209",
+        "name": "학생명",
+        "point": 39
+    },
+    {
+        "number": "20210",
+        "name": "학생명",
+        "point": 40
+    },
+    {
+        "number": "20211",
+        "name": "학생명",
+        "point": 41
+    },
+    {
+        "number": "20212",
+        "name": "학생명",
+        "point": 42
+    },
+    {
+        "number": "20213",
+        "name": "학생명",
+        "point": 43
+    },
+    {
+        "number": "20214",
+        "name": "학생명",
+        "point": 44
+    },
+    {
+        "number": "20215",
+        "name": "학생명",
+        "point": 45
+    },
+    {
+        "number": "20216",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "20217",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "20218",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "20219",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "20220",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "20221",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "20222",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "20223",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "20224",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "20225",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "20301",
+        "name": "학생명",
+        "point": 36
+    },
+    {
+        "number": "20302",
+        "name": "학생명",
+        "point": 37
+    },
+    {
+        "number": "20303",
+        "name": "학생명",
+        "point": 38
+    },
+    {
+        "number": "20304",
+        "name": "학생명",
+        "point": 39
+    },
+    {
+        "number": "20305",
+        "name": "학생명",
+        "point": 40
+    },
+    {
+        "number": "20306",
+        "name": "학생명",
+        "point": 41
+    },
+    {
+        "number": "20307",
+        "name": "학생명",
+        "point": 42
+    },
+    {
+        "number": "20308",
+        "name": "학생명",
+        "point": 43
+    },
+    {
+        "number": "20309",
+        "name": "학생명",
+        "point": 44
+    },
+    {
+        "number": "20310",
+        "name": "학생명",
+        "point": 45
+    },
+    {
+        "number": "20311",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "20312",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "20313",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "20314",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "20315",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "20316",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "20317",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "20318",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "20319",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "20320",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "20321",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "20322",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "20323",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "20324",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "20325",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "20401",
+        "name": "학생명",
+        "point": 41
+    },
+    {
+        "number": "20402",
+        "name": "학생명",
+        "point": 42
+    },
+    {
+        "number": "20403",
+        "name": "학생명",
+        "point": 43
+    },
+    {
+        "number": "20404",
+        "name": "학생명",
+        "point": 44
+    },
+    {
+        "number": "20405",
+        "name": "학생명",
+        "point": 45
+    },
+    {
+        "number": "20406",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "20407",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "20408",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "20409",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "20410",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "20411",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "20412",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "20413",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "20414",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "20415",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "20416",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "20417",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "20418",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "20419",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "20420",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "20421",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "20422",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "20423",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "20424",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "20425",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "20501",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "20502",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "20503",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "20504",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "20505",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "20506",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "20507",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "20508",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "20509",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "20510",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "20511",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "20512",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "20513",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "20514",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "20515",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "20516",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "20517",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "20518",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "20519",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "20520",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "20521",
+        "name": "학생명",
+        "point": 66
+    },
+    {
+        "number": "20522",
+        "name": "학생명",
+        "point": 67
+    },
+    {
+        "number": "20523",
+        "name": "학생명",
+        "point": 68
+    },
+    {
+        "number": "20524",
+        "name": "학생명",
+        "point": 69
+    },
+    {
+        "number": "20525",
+        "name": "학생명",
+        "point": 70
+    },
+    {
+        "number": "20601",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "20602",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "20603",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "20604",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "20605",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "20606",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "20607",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "20608",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "20609",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "20610",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "20611",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "20612",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "20613",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "20614",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "20615",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "20616",
+        "name": "학생명",
+        "point": 66
+    },
+    {
+        "number": "20617",
+        "name": "학생명",
+        "point": 67
+    },
+    {
+        "number": "20618",
+        "name": "학생명",
+        "point": 68
+    },
+    {
+        "number": "20619",
+        "name": "학생명",
+        "point": 69
+    },
+    {
+        "number": "20620",
+        "name": "학생명",
+        "point": 70
+    },
+    {
+        "number": "20621",
+        "name": "학생명",
+        "point": 71
+    },
+    {
+        "number": "20622",
+        "name": "학생명",
+        "point": 72
+    },
+    {
+        "number": "20623",
+        "name": "학생명",
+        "point": 73
+    },
+    {
+        "number": "20624",
+        "name": "학생명",
+        "point": 74
+    },
+    {
+        "number": "20625",
+        "name": "학생명",
+        "point": 75
+    },
+    {
+        "number": "20701",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "20702",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "20703",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "20704",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "20705",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "20706",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "20707",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "20708",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "20709",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "20710",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "20711",
+        "name": "학생명",
+        "point": 66
+    },
+    {
+        "number": "20712",
+        "name": "학생명",
+        "point": 67
+    },
+    {
+        "number": "20713",
+        "name": "학생명",
+        "point": 68
+    },
+    {
+        "number": "20714",
+        "name": "학생명",
+        "point": 69
+    },
+    {
+        "number": "20715",
+        "name": "학생명",
+        "point": 70
+    },
+    {
+        "number": "20716",
+        "name": "학생명",
+        "point": 71
+    },
+    {
+        "number": "20717",
+        "name": "학생명",
+        "point": 72
+    },
+    {
+        "number": "20718",
+        "name": "학생명",
+        "point": 73
+    },
+    {
+        "number": "20719",
+        "name": "학생명",
+        "point": 74
+    },
+    {
+        "number": "20720",
+        "name": "학생명",
+        "point": 75
+    },
+    {
+        "number": "20721",
+        "name": "학생명",
+        "point": 76
+    },
+    {
+        "number": "20722",
+        "name": "학생명",
+        "point": 77
+    },
+    {
+        "number": "20723",
+        "name": "학생명",
+        "point": 78
+    },
+    {
+        "number": "20724",
+        "name": "학생명",
+        "point": 79
+    },
+    {
+        "number": "20725",
+        "name": "학생명",
+        "point": 80
+    },
+    {
+        "number": "20801",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "20802",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "20803",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "20804",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "20805",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "20806",
+        "name": "학생명",
+        "point": 66
+    },
+    {
+        "number": "20807",
+        "name": "학생명",
+        "point": 67
+    },
+    {
+        "number": "20808",
+        "name": "학생명",
+        "point": 68
+    },
+    {
+        "number": "20809",
+        "name": "학생명",
+        "point": 69
+    },
+    {
+        "number": "20810",
+        "name": "학생명",
+        "point": 70
+    },
+    {
+        "number": "20811",
+        "name": "학생명",
+        "point": 71
+    },
+    {
+        "number": "20812",
+        "name": "학생명",
+        "point": 72
+    },
+    {
+        "number": "20813",
+        "name": "학생명",
+        "point": 73
+    },
+    {
+        "number": "20814",
+        "name": "학생명",
+        "point": 74
+    },
+    {
+        "number": "20815",
+        "name": "학생명",
+        "point": 75
+    },
+    {
+        "number": "20816",
+        "name": "학생명",
+        "point": 76
+    },
+    {
+        "number": "20817",
+        "name": "학생명",
+        "point": 77
+    },
+    {
+        "number": "20818",
+        "name": "학생명",
+        "point": 78
+    },
+    {
+        "number": "20819",
+        "name": "학생명",
+        "point": 79
+    },
+    {
+        "number": "20820",
+        "name": "학생명",
+        "point": 80
+    },
+    {
+        "number": "20821",
+        "name": "학생명",
+        "point": 81
+    },
+    {
+        "number": "20822",
+        "name": "학생명",
+        "point": 82
+    },
+    {
+        "number": "20823",
+        "name": "학생명",
+        "point": 83
+    },
+    {
+        "number": "20824",
+        "name": "학생명",
+        "point": 84
+    },
+    {
+        "number": "20825",
+        "name": "학생명",
+        "point": 85
+    },
+    {
+        "number": "30101",
+        "name": "학생명",
+        "point": 36
+    },
+    {
+        "number": "30102",
+        "name": "학생명",
+        "point": 37
+    },
+    {
+        "number": "30103",
+        "name": "학생명",
+        "point": 38
+    },
+    {
+        "number": "30104",
+        "name": "학생명",
+        "point": 39
+    },
+    {
+        "number": "30105",
+        "name": "학생명",
+        "point": 40
+    },
+    {
+        "number": "30106",
+        "name": "학생명",
+        "point": 41
+    },
+    {
+        "number": "30107",
+        "name": "학생명",
+        "point": 42
+    },
+    {
+        "number": "30108",
+        "name": "학생명",
+        "point": 43
+    },
+    {
+        "number": "30109",
+        "name": "학생명",
+        "point": 44
+    },
+    {
+        "number": "30110",
+        "name": "학생명",
+        "point": 45
+    },
+    {
+        "number": "30111",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "30112",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "30113",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "30114",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "30115",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "30116",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "30117",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "30118",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "30119",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "30120",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "30121",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "30122",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "30123",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "30124",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "30125",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "30201",
+        "name": "학생명",
+        "point": 41
+    },
+    {
+        "number": "30202",
+        "name": "학생명",
+        "point": 42
+    },
+    {
+        "number": "30203",
+        "name": "학생명",
+        "point": 43
+    },
+    {
+        "number": "30204",
+        "name": "학생명",
+        "point": 44
+    },
+    {
+        "number": "30205",
+        "name": "학생명",
+        "point": 45
+    },
+    {
+        "number": "30206",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "30207",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "30208",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "30209",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "30210",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "30211",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "30212",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "30213",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "30214",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "30215",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "30216",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "30217",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "30218",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "30219",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "30220",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "30221",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "30222",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "30223",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "30224",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "30225",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "30301",
+        "name": "학생명",
+        "point": 46
+    },
+    {
+        "number": "30302",
+        "name": "학생명",
+        "point": 47
+    },
+    {
+        "number": "30303",
+        "name": "학생명",
+        "point": 48
+    },
+    {
+        "number": "30304",
+        "name": "학생명",
+        "point": 49
+    },
+    {
+        "number": "30305",
+        "name": "학생명",
+        "point": 50
+    },
+    {
+        "number": "30306",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "30307",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "30308",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "30309",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "30310",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "30311",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "30312",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "30313",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "30314",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "30315",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "30316",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "30317",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "30318",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "30319",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "30320",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "30321",
+        "name": "학생명",
+        "point": 66
+    },
+    {
+        "number": "30322",
+        "name": "학생명",
+        "point": 67
+    },
+    {
+        "number": "30323",
+        "name": "학생명",
+        "point": 68
+    },
+    {
+        "number": "30324",
+        "name": "학생명",
+        "point": 69
+    },
+    {
+        "number": "30325",
+        "name": "학생명",
+        "point": 70
+    },
+    {
+        "number": "30401",
+        "name": "학생명",
+        "point": 51
+    },
+    {
+        "number": "30402",
+        "name": "학생명",
+        "point": 52
+    },
+    {
+        "number": "30403",
+        "name": "학생명",
+        "point": 53
+    },
+    {
+        "number": "30404",
+        "name": "학생명",
+        "point": 54
+    },
+    {
+        "number": "30405",
+        "name": "학생명",
+        "point": 55
+    },
+    {
+        "number": "30406",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "30407",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "30408",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "30409",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "30410",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "30411",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "30412",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "30413",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "30414",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "30415",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "30416",
+        "name": "학생명",
+        "point": 66
+    },
+    {
+        "number": "30417",
+        "name": "학생명",
+        "point": 67
+    },
+    {
+        "number": "30418",
+        "name": "학생명",
+        "point": 68
+    },
+    {
+        "number": "30419",
+        "name": "학생명",
+        "point": 69
+    },
+    {
+        "number": "30420",
+        "name": "학생명",
+        "point": 70
+    },
+    {
+        "number": "30421",
+        "name": "학생명",
+        "point": 71
+    },
+    {
+        "number": "30422",
+        "name": "학생명",
+        "point": 72
+    },
+    {
+        "number": "30423",
+        "name": "학생명",
+        "point": 73
+    },
+    {
+        "number": "30424",
+        "name": "학생명",
+        "point": 74
+    },
+    {
+        "number": "30425",
+        "name": "학생명",
+        "point": 75
+    },
+    {
+        "number": "30501",
+        "name": "학생명",
+        "point": 56
+    },
+    {
+        "number": "30502",
+        "name": "학생명",
+        "point": 57
+    },
+    {
+        "number": "30503",
+        "name": "학생명",
+        "point": 58
+    },
+    {
+        "number": "30504",
+        "name": "학생명",
+        "point": 59
+    },
+    {
+        "number": "30505",
+        "name": "학생명",
+        "point": 60
+    },
+    {
+        "number": "30506",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "30507",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "30508",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "30509",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "30510",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "30511",
+        "name": "학생명",
+        "point": 66
+    },
+    {
+        "number": "30512",
+        "name": "학생명",
+        "point": 67
+    },
+    {
+        "number": "30513",
+        "name": "학생명",
+        "point": 68
+    },
+    {
+        "number": "30514",
+        "name": "학생명",
+        "point": 69
+    },
+    {
+        "number": "30515",
+        "name": "학생명",
+        "point": 70
+    },
+    {
+        "number": "30516",
+        "name": "학생명",
+        "point": 71
+    },
+    {
+        "number": "30517",
+        "name": "학생명",
+        "point": 72
+    },
+    {
+        "number": "30518",
+        "name": "학생명",
+        "point": 73
+    },
+    {
+        "number": "30519",
+        "name": "학생명",
+        "point": 74
+    },
+    {
+        "number": "30520",
+        "name": "학생명",
+        "point": 75
+    },
+    {
+        "number": "30521",
+        "name": "학생명",
+        "point": 76
+    },
+    {
+        "number": "30522",
+        "name": "학생명",
+        "point": 77
+    },
+    {
+        "number": "30523",
+        "name": "학생명",
+        "point": 78
+    },
+    {
+        "number": "30524",
+        "name": "학생명",
+        "point": 79
+    },
+    {
+        "number": "30525",
+        "name": "학생명",
+        "point": 80
+    },
+    {
+        "number": "30601",
+        "name": "학생명",
+        "point": 61
+    },
+    {
+        "number": "30602",
+        "name": "학생명",
+        "point": 62
+    },
+    {
+        "number": "30603",
+        "name": "학생명",
+        "point": 63
+    },
+    {
+        "number": "30604",
+        "name": "학생명",
+        "point": 64
+    },
+    {
+        "number": "30605",
+        "name": "학생명",
+        "point": 65
+    },
+    {
+        "number": "30606",
+        "name": "학생명",
+        "point": 66
+    },
+    {
+        "number": "30607",
+        "name": "학생명",
+        "point": 67
+    },
+    {
+        "number": "30608",
+        "name": "학생명",
+        "point": 68
+    },
+    {
+        "number": "30609",
+        "name": "학생명",
+        "point": 69
+    },
+    {
+        "number": "30610",
+        "name": "학생명",
+        "point": 70
+    },
+    {
+        "number": "30611",
+        "name": "학생명",
+        "point": 71
+    },
+    {
+        "number": "30612",
+        "name": "학생명",
+        "point": 72
+    },
+    {
+        "number": "30613",
+        "name": "학생명",
+        "point": 73
+    },
+    {
+        "number": "30614",
+        "name": "학생명",
+        "point": 74
+    },
+    {
+        "number": "30615",
+        "name": "학생명",
+        "point": 75
+    },
+    {
+        "number": "30616",
+        "name": "학생명",
+        "point": 76
+    },
+    {
+        "number": "30617",
+        "name": "학생명",
+        "point": 77
+    },
+    {
+        "number": "30618",
+        "name": "학생명",
+        "point": 78
+    },
+    {
+        "number": "30619",
+        "name": "학생명",
+        "point": 79
+    },
+    {
+        "number": "30620",
+        "name": "학생명",
+        "point": 80
+    },
+    {
+        "number": "30621",
+        "name": "학생명",
+        "point": 81
+    },
+    {
+        "number": "30622",
+        "name": "학생명",
+        "point": 82
+    },
+    {
+        "number": "30623",
+        "name": "학생명",
+        "point": 83
+    },
+    {
+        "number": "30624",
+        "name": "학생명",
+        "point": 84
+    },
+    {
+        "number": "30625",
+        "name": "학생명",
+        "point": 85
+    },
+    {
+        "number": "30701",
+        "name": "학생명",
+        "point": 66
+    },
+    {
+        "number": "30702",
+        "name": "학생명",
+        "point": 67
+    },
+    {
+        "number": "30703",
+        "name": "학생명",
+        "point": 68
+    },
+    {
+        "number": "30704",
+        "name": "학생명",
+        "point": 69
+    },
+    {
+        "number": "30705",
+        "name": "학생명",
+        "point": 70
+    },
+    {
+        "number": "30706",
+        "name": "학생명",
+        "point": 71
+    },
+    {
+        "number": "30707",
+        "name": "학생명",
+        "point": 72
+    },
+    {
+        "number": "30708",
+        "name": "학생명",
+        "point": 73
+    },
+    {
+        "number": "30709",
+        "name": "학생명",
+        "point": 74
+    },
+    {
+        "number": "30710",
+        "name": "학생명",
+        "point": 75
+    },
+    {
+        "number": "30711",
+        "name": "학생명",
+        "point": 76
+    },
+    {
+        "number": "30712",
+        "name": "학생명",
+        "point": 77
+    },
+    {
+        "number": "30713",
+        "name": "학생명",
+        "point": 78
+    },
+    {
+        "number": "30714",
+        "name": "학생명",
+        "point": 79
+    },
+    {
+        "number": "30715",
+        "name": "학생명",
+        "point": 80
+    },
+    {
+        "number": "30716",
+        "name": "학생명",
+        "point": 81
+    },
+    {
+        "number": "30717",
+        "name": "학생명",
+        "point": 82
+    },
+    {
+        "number": "30718",
+        "name": "학생명",
+        "point": 83
+    },
+    {
+        "number": "30719",
+        "name": "학생명",
+        "point": 84
+    },
+    {
+        "number": "30720",
+        "name": "학생명",
+        "point": 85
+    },
+    {
+        "number": "30721",
+        "name": "학생명",
+        "point": 86
+    },
+    {
+        "number": "30722",
+        "name": "학생명",
+        "point": 87
+    },
+    {
+        "number": "30723",
+        "name": "학생명",
+        "point": 88
+    },
+    {
+        "number": "30724",
+        "name": "학생명",
+        "point": 89
+    },
+    {
+        "number": "30725",
+        "name": "학생명",
+        "point": 90
+    },
+    {
+        "number": "30801",
+        "name": "학생명",
+        "point": 71
+    },
+    {
+        "number": "30802",
+        "name": "학생명",
+        "point": 72
+    },
+    {
+        "number": "30803",
+        "name": "학생명",
+        "point": 73
+    },
+    {
+        "number": "30804",
+        "name": "학생명",
+        "point": 74
+    },
+    {
+        "number": "30805",
+        "name": "학생명",
+        "point": 75
+    },
+    {
+        "number": "30806",
+        "name": "학생명",
+        "point": 76
+    },
+    {
+        "number": "30807",
+        "name": "학생명",
+        "point": 77
+    },
+    {
+        "number": "30808",
+        "name": "학생명",
+        "point": 78
+    },
+    {
+        "number": "30809",
+        "name": "학생명",
+        "point": 79
+    },
+    {
+        "number": "30810",
+        "name": "학생명",
+        "point": 80
+    },
+    {
+        "number": "30811",
+        "name": "학생명",
+        "point": 81
+    },
+    {
+        "number": "30812",
+        "name": "학생명",
+        "point": 82
+    },
+    {
+        "number": "30813",
+        "name": "학생명",
+        "point": 83
+    },
+    {
+        "number": "30814",
+        "name": "학생명",
+        "point": 84
+    },
+    {
+        "number": "30815",
+        "name": "학생명",
+        "point": 85
+    },
+    {
+        "number": "30816",
+        "name": "학생명",
+        "point": 86
+    },
+    {
+        "number": "30817",
+        "name": "학생명",
+        "point": 87
+    },
+    {
+        "number": "30818",
+        "name": "학생명",
+        "point": 88
+    },
+    {
+        "number": "30819",
+        "name": "학생명",
+        "point": 89
+    },
+    {
+        "number": "30820",
+        "name": "학생명",
+        "point": 90
+    },
+    {
+        "number": "30821",
+        "name": "학생명",
+        "point": 91
+    },
+    {
+        "number": "30822",
+        "name": "학생명",
+        "point": 92
+    },
+    {
+        "number": "30823",
+        "name": "학생명",
+        "point": 93
+    },
+    {
+        "number": "30824",
+        "name": "학생명",
+        "point": 94
+    },
+    {
+        "number": "30825",
+        "name": "학생명",
+        "point": 95
+    }
+]

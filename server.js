@@ -1,11 +1,10 @@
 const express = require('express');
-const jwt = require('jsonwebtoken');
-const cookieParser = require('cookie-parser');
 const path = require('path');
 const app = express();
-const JWT_SECRET = 'roulette';
 const PORT = 5000;
-
+const cors = require('cors');
+app.use(cors());
+app.use(express.static('public')); 
 
 app.listen(5000, function(){
     console.log('listening on 5000')

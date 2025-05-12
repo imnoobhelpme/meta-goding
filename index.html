@@ -1,113 +1,201 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>메타고딩 룰렛 - 로그인</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-    }
+    <meta charset="UTF-8" />
+    <link rel="icon" href="meta_roulette.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>META ROULETTE</title>
+    <style>
+        @font-face {
+            font-family: "noto_sans_kr";
+            src: url(noto_sans_kr.woff2) format("woff2");
+            font-weight: normal;
+        }
 
-    header {
-      background-color: #ffffff;
-      color: #333;
-      padding: 16px 0;
-      font-size: 20px;
-      font-weight: bold;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      z-index: 1000;
-    }
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            font-family: "noto_sans_kr", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      padding-top: 60px;
-      box-sizing: border-box;
-      background-color: #f2f3f5;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('background.png') center;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .login-container {
-      background-color: #ffffff;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-      width: 100%;
-      max-width: 360px;
-      text-align: center;
-      margin-top: -60px;
-    }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
 
-    .login-container img {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 16px;
-    }
+        .login-container {
+            position: relative;
+            z-index: 1;
+            width: 350px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 30px;
+            padding: 2rem;
+            text-align: center;
+            color: #fff;
+        }
 
-    .login-container h2 {
-      margin-bottom: 24px;
-      color: #333;
-    }
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: -30px;
+            margin-bottom: 2rem;
+        }
 
-    .login-container label {
-      display: block;
-      text-align: left;
-      margin-bottom: 8px;
-      color: #444;
-    }
+        .login-text {
+            font-size: 28px;
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+        }
 
-    .login-container input,
-    .login-container button {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      font-size: 16px;
-      box-sizing: border-box;
-    }
+        .roulette-icon {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 8px;
+            background-size: contain;
+        }
 
-    .login-container input {
-      margin-bottom: 20px;
-      border: 1px solid #ddd;
-      background-color: #fafafa;
-    }
+        .meta-roulette-logo {
+            width: 120px;
+            height: auto;
+        }
 
-    .login-container button {
-      background-color: #e0e0e0;
-      color: #333;
-      border: none;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
+        .input-field {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
 
-    .login-container button:hover {
-      background-color: #d0d0d0;
-    }
-  </style>
+        .input-field label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 0.3rem;
+            color: #ccc;
+        }
+
+        .input-field input[type="text"] {
+            width: 100%;
+            padding: 0.6rem;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #222;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .input-field input[type="text"]:focus {
+            outline: none;
+        }
+
+        .input-field input[type="text"]::placeholder {
+            color: #bbb;
+        }
+
+        .login-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #e9bf5d;
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #d4a937;
+        }
+
+        .warning-message {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            background-color: #b33939;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            transition: transform 0.5s ease;
+        }
+
+        .warning-message.show {
+            transform: translate(-50%, 0);
+        }
+    </style>
 </head>
+
 <body>
-  <header>메타고딩 룰렛</header>
-  <div class="container">
-    <div class="login-container">
-      <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="User Icon" />
-      <h2>로그인</h2>
-      <form action="loginproc.php" method="post" id="login-form">
-        <label for="username">학번</label>
-        <input type="text" id="username" name="username" placeholder="학번을 입력하세요" required>
-        <label for="username">생년월일</label>
-        <input type="text" id="birthday" name="birthday" placeholder="생년월일을 입력하세요" required>
-        <button type="submit">로그인</button>
+    <div id="warningMessage" class="warning-message">
+        올바른 번호를 입력하세요.
     </div>
-  </div>
-  </script>
+
+    <div class="login-container">
+        <div class="logo">
+            <div class="roulette-icon"></div>
+            <img src="meta_roulette.svg" class="meta-roulette-logo" alt="Meta Roulette Logo">
+        </div>
+        <div class="login-text">환영합니다!</div>
+        <div class="input-field">
+            <label for="userId">번호</label>
+            <input id="userId" type="text" placeholder="번호를 입력하세요." autocomplete="off" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+        </div>
+        <button class="login-btn">로그인</button>
+    </div>
+
+    <script>
+        const loginBtn = document.querySelector('.login-btn');
+        const warningMessage = document.getElementById('warningMessage');
+        const userIdInput = document.getElementById('userId');
+
+        loginBtn.addEventListener('click', async () => {
+            if (!userIdInput.value) {
+                warningMessage.classList.add('show');
+                setTimeout(() => warningMessage.classList.remove('show'), 1500);
+                return;
+            }
+            try {
+                const response = await fetch('/user.json');
+                const users = await response.json();
+                const user = users.find(u => u.number === userIdInput.value);
+                if (user) {
+                    sessionStorage.setItem('loggedInUser', JSON.stringify(user));
+                    window.location.href = 'user.html';
+                } else {
+                    warningMessage.classList.add('show');
+                    setTimeout(() => warningMessage.classList.remove('show'), 1500);
+                }
+            } catch (err) {
+                console.error(err);
+                warningMessage.classList.add('show');
+                setTimeout(() => warningMessage.classList.remove('show'), 1500);
+            }
+        });
+    </script>
 </body>
 </html>
