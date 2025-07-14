@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Meta Roulette</title>
+    <style>
+        @font-face {
+            font-family: "noto_sans_kr";
+            src: url(noto_sans_kr.woff2) format("woff2");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            font-family: "noto_sans_kr", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url("background.png") center/cover no-repeat;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .5);
+            z-index: 0;
+        }
+
+        section {
+            position: relative;
+            z-index: 1;
+            width: 350px;
+            padding: 2rem;
+            border-radius: 30px;
+            background: rgba(0, 0, 0, .5);
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        h1::before {
+            content: "";
+            width: 75px;
+            height: 50px;
+            margin-bottom: 8px;
+            background: url("meta_roulette.svg") center/contain no-repeat;
+            display: block;
+        }
+
+        #loginForm,
+        #playArea {
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: .3rem;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: 100%;
+            padding: .6rem;
+            margin-top: .2rem;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: #222;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button,
+        #betBtn {
+            display: inline-block;
+            width: 100%;
+            margin-top: 1.5rem;
+            padding: .8rem;
+            border: none;
+            border-radius: 5px;
+            background: #e9bf5d;
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .3s ease;
+        }
+
+        button:hover {
+            background: #d4a937;
+        }
+
+        #toast {
+            position: fixed;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, -100%);
+            background: #b33939;
+            color: #fff;
+            padding: .5rem 1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+            z-index: 9999;
+            transition: transform .5s ease, opacity .3s;
+            opacity: 0;
+        }
+
+        #toast.show {
+            transform: translate(-50%, 0);
+            opacity: 1;
+        }
+
+        #playArea {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 1.2rem;
+            text-align: center;
+            margin-top: .5rem;
+        }
+
+        #playArea p {
+            font-size: 17px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.4;
+        }
+
+        #bal {
+            color: #e9bf5d;
+            font-weight: 700;
+            letter-spacing: .2px;
+        }
+
+        #playArea label {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: .4rem;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        #playArea input[type="number"] {
+            width: 100%;
+            padding: .6rem;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: #222;
+            color: #fff;
+            font-size: 15px;
+        }
+
+        #playArea input:focus {
+            outline: none;
+        }
+
+        #betBtn {
+            margin-top: .4rem;
+        }
+
+        #last {
+            margin-top: .4rem;
+            font-size: 15px;
+            color: #e9bf5d;
+        }
+
+        .bet-options {
+            display: flex;
+            justify-content: space-between;
+            gap: .5rem;
+            margin-top: .2rem;
+            width: 100%;
+        }
+
+        .bet-options label {
+            display: flex;
+            align-items: center;
+            gap: .25rem;
+            cursor: pointer;
+            font-size: 15px;
+            color: #eee;
+            user-select: none;
+        }
+
+        .bet-options input {
+            accent-color: #e9bf5d;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Meta Roulette</h1>
+
+        <form id="loginForm">
+            <label>사용자 번호
+                <input id="num" type="number" required>
+            </label>
+            <button type="submit">로그인</button>
+        </form>
+
+        <div id="playArea" style="display:none">
+            <p>안녕하세요, <span id="nick"></span> 님!</p>
+            <p>내 포인트: <span id="bal">0</span>P</p>
+
+            <label>베팅 숫자
+                <div class="bet-options" role="radiogroup" aria-label="베팅 숫자 선택">
+                    <label><input type="radio" name="bet" value="1" checked>1</label>
+                    <label><input type="radio" name="bet" value="3">3</label>
+                    <label><input type="radio" name="bet" value="5">5</label>
+                    <label><input type="radio" name="bet" value="10">10</label>
+                    <label><input type="radio" name="bet" value="20">20</label>
+                </div>
+            </label>
+
+            <label>베팅 포인트
+                <input id="amt" type="number" min="1">
+            </label>
+
+            <button id="betBtn">베팅하기</button>
+            <p id="last">최근 결과 : --</p>
+        </div>
+    </section>
+
+    <div id="toast"></div>
+
+    <script>
+        const $ = s => document.querySelector(s);
+        const toast = msg => {
+            const t = $("#toast");
+            t.textContent = msg;
+            t.classList.add("show");
+            setTimeout(() => t.classList.remove("show"), 2000);
+        };
+
+        const allowedNumbers = [1, 3, 5, 10, 20];
+        let me = null;
+
+        $("#loginForm").addEventListener("submit", async e => {
+            e.preventDefault();
+            const num = +$("#num").value;
+            const users = await fetch("/api/users").then(r => r.json());
+            me = users.find(u => Number(u.number) === num);
+            if (!me) {
+                toast("없는 번호");
+                return;
+            }
+
+            $("#loginForm").style.display = "none";
+            $("#playArea").style.display = "block";
+            $("#nick").textContent = me.nickname || me.number;
+            $("#bal").textContent = me.point;
+        });
+
+        $("#betBtn").addEventListener("click", async () => {
+            if (!me) return;
+
+            const betNumber = parseInt(document.querySelector('input[name="bet"]:checked')?.value ?? NaN, 10);
+            const amount = +$("#amt").value;
+
+            if (amount <= 0 || !allowedNumbers.includes(betNumber)) {
+                toast("값 확인");
+                return;
+            }
+            if (amount > me.point) {
+                toast("포인트 부족");
+                return;
+            }
+
+            const res = await fetch("/api/bet", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    userNumber: me.number,
+                    betNumber,
+                    amount
+                })
+            }).then(r => r.json());
+
+            if (res && res.ok) {
+                me.point -= amount;
+                $("#bal").textContent = me.point;
+                $("#amt").value = "";
+                toast("베팅 완료!");
+            } else toast(res.error || "실패");
+        });
+
+        setInterval(async () => {
+            const { resultNumber, multiplier } = await fetch("/api/result").then(r => r.json());
+            if (resultNumber !== null)
+                $("#last").textContent = `최근 결과 : ${resultNumber} (×${multiplier})`;
+
+            if (me) {
+                const users = await fetch("/api/users").then(r => r.json());
+                const fresh = users.find(u => Number(u.number) === Number(me.number));
+                if (fresh && fresh.point !== me.point) {
+                    me.point = fresh.point;
+                    $("#bal").textContent = me.point;
+                }
+            }
+        }, 3000);
+    </script>
+</body>
+</html>
