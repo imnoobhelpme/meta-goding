@@ -1,32 +1,38 @@
 [
   {
     "number": 10101,
-    "nickname": "강ㅇㅇ",
-    "point": 0
+    "nickname": "User A",
+    "point": 1000,
+    "birthday": 113
   },
   {
     "number": 10102,
-    "nickname": "김ㅇㅇ",
-    "point": 1111
+    "nickname": "User B",
+    "point": 900,
+    "birthday": 1010
   },
   {
     "number": 10103,
-    "nickname": "박ㅇㅇ",
-    "point": 0
+    "nickname": "User C",
+    "point": 1000,
+    "birthday": 1010
   },
   {
     "number": 10104,
-    "nickname": "이ㅇㅇ",
-    "point": 0
+    "nickname": "User D",
+    "point": 1000,
+    "birthday": 1010
   },
   {
     "number": 10106,
-    "nickname": "정ㅇㅇ",
-    "point": 0
+    "nickname": "User E",
+    "point": 1000,
+    "birthday": 1010
   },
   {
     "number": 10105,
-    "nickname": "최ㅇㅇ",
-    "point": 0
+    "nickname": "User F",
+    "point": 1000,
+    "birthday": 1010
   }
 ]

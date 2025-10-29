@@ -11,14 +11,6 @@ app.get('/', (_, res) =>
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 );
 
-app.get('/YWRtaW4K', (_, res) =>
-    res.sendFile(path.join(__dirname, 'public', 'admin.html'))
-);
-
-app.get('/roulette', (_, res) =>
-    res.sendFile(path.join(__dirname, 'public', 'roulette.html'))
-);
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 const DATA = path.join(__dirname, 'data');
@@ -26,35 +18,53 @@ const USERS = path.join(DATA, 'user.json');
 const BETS = path.join(DATA, 'bets.json');
 const LAST = path.join(DATA, 'last.json');
 
-const read = async (file, fallback = []) => {
-    try {
-        return JSON.parse(await fs.readFile(file, 'utf8'));
-    } catch (e) {
-        console.error(`[READ] ${file}:`, e.message);
-        return fallback;
-    }
-};
+const read = (file, fallback = []) =>
+    fs.readFile(file, 'utf-8').then(JSON.parse).catch(() => fallback);
+
 const write = (file, data) =>
     fs.writeFile(file, JSON.stringify(data, null, 2));
 
 app.get('/api/users', async (_, res) => {
-    res.json(await read(USERS));
+    const users = await read(USERS);
+    res.json(users.map(({
+        birthday,
+        ...u
+    }) => u));
 });
 
-app.post('/api/users/update', async (req, res) => {
+app.post('/api/login', async (req, res) => {
     const {
         number,
-        point
-    } = req.body;
+        birthday
+    } = req.body || {};
+    if (number == null || birthday == null) {
+        return res.status(400).json({
+            error: '정보를 입력해주세요'
+        });
+    }
+
     const users = await read(USERS);
-    const u = users.find(v => +v.number === +number);
-    if (!u) return res.status(404).json({
-        error: 'user not found'
-    });
-    u.point = +point;
-    await write(USERS, users);
+    const u = users.find(x => Number(x.number) === Number(number));
+    if (!u) {
+        return res.status(404).json({
+            error: '존재하지 않는 학번이에요'
+        });
+    }
+
+    const toStrExact = v => (v === null || v === undefined) ? '' : String(v);
+    if (toStrExact(u.birthday) !== toStrExact(birthday)) {
+        return res.status(401).json({
+            error: '생년월일이 옳지 않아요'
+        });
+    }
+
+    const {
+        birthday: _b,
+        ...safe
+    } = u;
     res.json({
-        ok: true
+        ok: true,
+        user: safe
     });
 });
 
@@ -63,25 +73,43 @@ app.post('/api/bet', async (req, res) => {
         userNumber,
         betNumber,
         amount
-    } = req.body;
+    } = req.body || {};
+    if (![1, 3, 5, 10, 20].includes(Number(betNumber))) {
+        return res.status(400).json({
+            error: 'invalid betNumber'
+        });
+    }
+    if (!userNumber || !amount || Number(amount) <= 0) {
+        return res.status(400).json({
+            error: 'bad request'
+        });
+    }
+
     const users = await read(USERS);
-    const u = users.find(v => +v.number === +userNumber);
+    const u = users.find(x => Number(x.number) === Number(userNumber));
     if (!u) return res.status(404).json({
         error: 'user not found'
     });
-    if (+amount > u.point) return res.status(400).json({
-        error: 'not enough point'
-    });
+    if (Number(amount) > Number(u.point)) {
+        return res.status(400).json({
+            error: '포인트가 부족해요'
+        });
+    }
 
-    u.point -= +amount;
+    u.point = Number(u.point) - Number(amount);
+
     const bets = await read(BETS);
     bets.push({
-        userNumber: +userNumber,
-        betNumber: +betNumber,
-        amount: +amount
+        userNumber: Number(userNumber),
+        betNumber: Number(betNumber),
+        amount: Number(amount)
     });
 
-    await Promise.all([write(USERS, users), write(BETS, bets)]);
+    await Promise.all([
+        write(USERS, users),
+        write(BETS, bets)
+    ]);
+
     res.json({
         ok: true
     });
@@ -91,60 +119,64 @@ app.post('/api/spin', async (req, res) => {
     const {
         resultNumber,
         multiplier
-    } = req.body;
+    } = req.body || {};
+    if (resultNumber == null || multiplier == null) {
+        return res.status(400).json({
+            error: 'bad request'
+        });
+    }
+
     const [users, bets] = await Promise.all([read(USERS), read(BETS)]);
 
-    bets.forEach(({
-        userNumber,
-        betNumber,
-        amount
-    }) => {
-        const u = users.find(v => +v.number === +userNumber);
-        if (!u) return;
-        if (+betNumber === +resultNumber) u.point += amount * multiplier;
+    bets.forEach(b => {
+        if (Number(b.betNumber) === Number(resultNumber)) {
+            const u = users.find(x => Number(x.number) === Number(b.userNumber));
+            if (u) u.point = Number(u.point) + Number(b.amount) * Number(multiplier);
+        }
     });
 
     await Promise.all([
         write(USERS, users),
         write(BETS, []),
         write(LAST, {
-            resultNumber: +resultNumber,
-            multiplier: +multiplier,
+            resultNumber: Number(resultNumber),
+            multiplier: Number(multiplier),
             time: Date.now()
         })
     ]);
 
     res.json({
-        ok: true,
-        users
+        ok: true
     });
 });
 
 app.get('/api/result', async (_, res) => {
-    res.json(await read(LAST, {
+    const last = await read(LAST, {
         resultNumber: null,
         multiplier: null
-    }));
+    });
+    res.json(last);
 });
 
 app.post('/api/reset', async (_, res) => {
     const users = await read(USERS);
     users.forEach(u => u.point = 0);
+
     await Promise.all([
         write(USERS, users),
         write(BETS, []),
-        write(LAST, {
+        write(LAST, { 
             resultNumber: null,
             multiplier: null
         })
     ]);
+
     res.json({
         ok: true
     });
 });
 
-app.listen(PORT, () =>
-    console.log(`META-ROULETTE ▶  http://localhost:${3000}`)
-);
-
 app.get('/api/bets', async (_, res) => res.json(await read(BETS)));
+
+app.listen(PORT, () => console.log(`META-ROULETTE ▶  http://localhost:${PORT}`));
+
