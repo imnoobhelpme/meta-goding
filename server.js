@@ -54,7 +54,7 @@ app.post('/api/login', async (req, res) => {
     const toStrExact = v => (v === null || v === undefined) ? '' : String(v);
     if (toStrExact(u.birthday) !== toStrExact(birthday)) {
         return res.status(401).json({
-            error: '생년월일이 옳지 않아요'
+            error: '고유번호가 옳지 않아요'
         });
     }
 
