@@ -319,8 +319,8 @@
             <label>학번
                 <input id="num" type="number" required inputmode="numeric" autocomplete="off" placeholder="학번을 입력하세요(5글자)">
             </label>
-            <label>생년월일
-                <input id="bday" type="text" required name="nohistory" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" inputmode="numeric" pattern="[0-9]*" list="__nohistory__" placeholder="생년월일을 입력하세요(3글자/4글자)">
+            <label>고유번호
+                <input id="bday" type="text" required name="nohistory" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" list="__nohistory__" placeholder="고유번호를 입력하세요(6글자)">
             </label>
             <datalist id="__nohistory__"></datalist>
 
@@ -398,11 +398,6 @@
             e.preventDefault();
             const number = +$("#num").value;
             const birthday = ($("#bday").value || "").trim();
-
-            if (!/^[0-9]+$/.test(birthday)) {
-                toast("생년월일은 숫자만 입력하세요");
-                return;
-            }
 
             const resp = await fetch("/api/login", {
                 method: "POST",
