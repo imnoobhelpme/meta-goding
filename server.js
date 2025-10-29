@@ -176,6 +176,14 @@ app.post('/api/reset', async (_, res) => {
     });
 });
 
+app.get('/cm91bGV0dGU=', (_, res) =>
+    res.sendFile(path.join(__dirname, 'public', 'cm91bGV0dGU=.html'))
+);
+
+app.get('/YWRtaW4K', (_, res) =>
+    res.sendFile(path.join(__dirname, 'public', 'YWRtaW4K.html'))
+);
+
 app.get('/api/bets', async (_, res) => res.json(await read(BETS)));
 
 app.listen(PORT, () => console.log(`META-ROULETTE ▶  http://localhost:${PORT}`));
